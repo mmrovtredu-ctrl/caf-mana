@@ -86,37 +86,7 @@ export function letrasInterativas(seletor = ".letras-int") {
   } catch (e) { console.warn("[anim] letrasInterativas:", e); }
 }
 
-/* ---------- 4. Revelação de mídia ao rolar (produto/fotos da feira) ----------
-   Sem anime.js, o elemento NUNCA fica escondido por CSS — só entra em
-   clip-path quando a animação de fato vai rodar. */
-export function revelarMidia(seletor = ".media-clip") {
-  if (!A) return;
-  const alvos = document.querySelectorAll(seletor);
-  if (!alvos.length || !("IntersectionObserver" in window)) return;
-  try {
-    const { waapi } = A;
-    const vistos = new WeakSet();
-    const io = new IntersectionObserver((entradas) => {
-      entradas.forEach((entrada) => {
-        const el = entrada.target;
-        if (!entrada.isIntersecting || vistos.has(el)) return;
-        vistos.add(el);
-        try {
-          waapi.animate(el, {
-            clipPath: ["inset(0 0 0 100%)", "inset(0 0 0 0%)"],
-            scale: [1.06, 1],
-            duration: 900,
-            easing: "cubic-bezier(.16,1,.3,1)",
-          });
-        } catch (_) { el.style.clipPath = "none"; }
-        io.unobserve(el);
-      });
-    }, { threshold: .2 });
-    alvos.forEach((el) => { el.style.clipPath = "inset(0 0 0 100%)"; io.observe(el); });
-  } catch (e) { console.warn("[anim] revelarMidia:", e); }
-}
-
-/* ---------- 5. Entrada em cascata para grupos de cards ---------- */
+/* ---------- 4. Entrada em cascata para grupos de cards ---------- */
 export function entradaCards(seletor) {
   const els = document.querySelectorAll(seletor);
   if (!els.length) return;

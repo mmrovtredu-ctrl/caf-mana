@@ -52,7 +52,5 @@ function montarMarquee() {
   anim.heroTitulo();
   anim.heroEntrada();
   anim.letrasInterativas();
-  anim.revelarMidia();
-  anim.entradaCards(".galeria figure");
   anim.entradaCards(".produto");
 })();
