@@ -30,7 +30,8 @@ export function heroTitulo(seletor = ".hero h1") {
     const { animate, stagger, splitText } = A;
     const alvo = document.querySelector(seletor);
     if (!alvo) return;
-    const { chars } = splitText(alvo, { words: false, chars: true });
+    const { chars, words } = splitText(alvo, { words: true, chars: true });
+    if (words) words.forEach((w) => { w.style.display = "inline-block"; });
     animate(chars, {
       y: [
         { to: "-1.6rem", ease: "outExpo", duration: 480 },
@@ -58,13 +59,16 @@ export function heroEntrada() {
   } catch (e) { console.warn("[anim] heroEntrada:", e); }
 }
 
-/* ---------- 3. Letras interativas: reagem ao passar o mouse ---------- */
+/* ---------- 3. Letras interativas: reagem ao passar o mouse ----------
+   words:true + chars:true agrupa as letras dentro de cada palavra, pra
+   evitar que a linha quebre no meio de uma palavra (bug já visto). */
 export function letrasInterativas(seletor = ".letras-int") {
   if (!A) return;
   try {
     const { splitText, waapi } = A;
     document.querySelectorAll(seletor).forEach((titulo) => {
-      const { chars } = splitText(titulo, { words: false, chars: true });
+      const { chars, words } = splitText(titulo, { words: true, chars: true });
+      if (words) words.forEach((w) => { w.style.display = "inline-block"; });
       chars.forEach((c) => {
         c.style.display = "inline-block";
         c.addEventListener("mouseenter", () => {
