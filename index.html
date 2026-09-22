@@ -63,23 +63,27 @@
     <div class="kicker">Presença de mercado</div>
     <h2 class="letras-int">Já rodamos a feira — e a imprensa notou</h2>
     <p>Em setembro de 2026, o Café Maná esteve na Expo Indústria Maranhão, com cobertura de imprensa no estande. Prova de que o produto já circula fora da mesa de casa.</p>
-    <div class="galeria">
-      <figure data-reveal>
-        <img src="assets/feira-entrevista.webp" alt="Entrevista com a equipe do Café Maná na Expo Indústria Maranhão">
-        <figcaption><b>Entrevista na feira</b>Expo Indústria Maranhão 2026</figcaption>
-      </figure>
-      <figure data-reveal>
-        <img src="assets/feira-adra-palco.webp" alt="Equipe do Café Maná na Expo Indústria Maranhão">
-        <figcaption><b>Entrevista no palco</b>Expo Indústria Maranhão 2026</figcaption>
-      </figure>
-      <figure data-reveal>
-        <img src="assets/feira-grupo.webp" alt="Grupo reunido com pacotes de Café Maná na feira">
-        <figcaption><b>Rodada de imprensa</b>Com parceiros e visitantes</figcaption>
-      </figure>
-      <figure data-reveal>
-        <img src="assets/feira-estande.webp" alt="Estande do Café Maná na feira, com produto em exposição">
-        <figcaption><b>No estande</b>Degustação e atendimento</figcaption>
-      </figure>
+    <div class="galeria-wrap">
+      <button class="galeria-nav prev" onclick="document.getElementById('galeria-scroll').scrollBy({left:-336,behavior:'smooth'})" aria-label="Foto anterior">‹</button>
+      <div class="galeria" id="galeria-scroll">
+        <figure>
+          <img src="assets/feira-entrevista.webp" alt="Entrevista com a equipe do Café Maná na Expo Indústria Maranhão">
+          <figcaption><b>Entrevista na feira</b>Expo Indústria Maranhão 2026</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/feira-adra-palco.webp" alt="Equipe do Café Maná na Expo Indústria Maranhão">
+          <figcaption><b>Entrevista no palco</b>Expo Indústria Maranhão 2026</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/feira-grupo.webp" alt="Grupo reunido com pacotes de Café Maná na feira">
+          <figcaption><b>Rodada de imprensa</b>Com parceiros e visitantes</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/feira-estande.webp" alt="Estande do Café Maná na feira, com produto em exposição">
+          <figcaption><b>No estande</b>Degustação e atendimento</figcaption>
+        </figure>
+      </div>
+      <button class="galeria-nav next" onclick="document.getElementById('galeria-scroll').scrollBy({left:336,behavior:'smooth'})" aria-label="Próxima foto">›</button>
     </div>
   </div>
 </section>
