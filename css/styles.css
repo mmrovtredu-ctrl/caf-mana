@@ -145,9 +145,12 @@ p{max-width:62ch}
 
 /* ---------- ORIGEM ---------- */
 .origem{background:var(--branco); border-top:1px solid var(--linha); border-bottom:1px solid var(--linha)}
-.origem-single{max-width:640px}
-.origem-single h2{max-width:none}
+.origem-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:7vw; align-items:center}
+.origem-grid h2{max-width:none}
 .origem blockquote{margin:26px 0 0; padding-left:20px; border-left:3px solid var(--ouro); font-style:italic; color:var(--vinho-2); font-size:15px; max-width:44ch}
+.origem-fotos img{width:100%; border-radius:var(--r-sm); box-shadow:0 18px 36px rgba(43,23,16,.2); display:block}
+.origem-fotos img:first-child{margin-bottom:14px}
+.origem-legenda{margin-top:12px; font-size:12.5px; color:var(--ouro-forte); max-width:none}
 
 /* ---------- PRODUTOS ---------- */
 .produtos-grid{display:grid; grid-template-columns:1fr 1fr; gap:5vw; margin-top:6vh}
@@ -190,6 +193,20 @@ th{font-weight:700; color:var(--vinho); border-bottom:2px solid var(--ouro)}
 .comercial .listas li{margin-bottom:6px}
 .comercial .cta-final{margin-top:7vh}
 
+/* ---------- GRÁFICO DE LUCRO ---------- */
+.lucro-block{display:grid; grid-template-columns:1.15fr .85fr; gap:6vw; align-items:center; margin-top:8vh; padding-top:6vh; border-top:1px solid rgba(246,232,201,.2)}
+.lucro-chart{width:100%; height:auto}
+.lucro-chart .grid-line{stroke:rgba(246,232,201,.15); stroke-width:1}
+.lucro-chart .axis-label{font-family:'Merriweather',serif; font-size:11px; fill:#d9c39a}
+.lucro-chart .bar{fill:var(--ouro)}
+.lucro-chart .bar.destaque{fill:var(--ouro-bright)}
+.lucro-chart .bar-value{font-family:'Merriweather',serif; font-weight:700; font-size:13px; fill:#fff}
+.lucro-chart .bar-label{font-family:'Merriweather',serif; font-size:11.5px; fill:#e7d3ab}
+.lucro-texto h4{font-family:'Merriweather',serif; color:#fff; font-size:15px; margin:0 0 10px}
+.lucro-texto p{font-size:13.5px; color:#ecd9b3; max-width:none; margin-bottom:12px}
+.lucro-texto ul{padding-left:18px; margin:0 0 16px; font-size:13px; color:#ecd9b3}
+.lucro-texto li{margin-bottom:6px}
+.lucro-obs{font-size:11.5px; color:#c7ab7c}
 /* ---------- FOOTER ---------- */
 footer{background:#1c0f08; color:#cbb488; padding:6vh 0 calc(6vh + env(safe-area-inset-bottom,0px))}
 footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px; font-size:12.5px}
@@ -219,9 +236,12 @@ nav.top.scrolled{box-shadow:0 4px 18px rgba(43,23,16,.08)}
   .hero .grid{grid-template-columns:1fr; padding-bottom:6vh}
   .hero-figure{order:-1; max-width:260px; margin:0 auto 26px}
   .produtos-grid{grid-template-columns:1fr}
+  .origem-grid{grid-template-columns:1fr}
+  .origem-fotos{order:-1; margin-bottom:6px}
   .passos{grid-template-columns:1fr; gap:34px}
   .preco-row{grid-template-columns:1fr}
   .comercial .listas{grid-template-columns:1fr}
+  .lucro-block{grid-template-columns:1fr; gap:5vh}
   .strip .fact{border-left:none; padding-left:0}
   .galeria-wrap{margin-top:5vh}
 }
