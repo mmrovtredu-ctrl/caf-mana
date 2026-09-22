@@ -61,8 +61,8 @@
 <section class="presenca">
   <div class="wrap">
     <div class="kicker">Presença de mercado</div>
-    <h2 class="letras-int">Já rodamos a feira — e a imprensa notou</h2>
-    <p>Em setembro de 2026, o Café Maná esteve na Expo Indústria Maranhão, com cobertura de imprensa no estande. Prova de que o produto já circula fora da mesa de casa.</p>
+    <h2 class="letras-int">Já saiu da cozinha — e conquistou quem provou</h2>
+    <p>O aroma torrado do Café Maná já enche o ar fora de casa. Em 2026, na Expo Indústria Maranhão, o produto foi parado por jornalistas e experimentado por gente que nunca tinha ouvido falar em café de arroz — e saiu convencida antes mesmo de saber que aquela xícara não tinha uma gota de cafeína.</p>
     <div class="galeria-wrap">
       <button class="galeria-nav prev" onclick="document.getElementById('galeria-scroll').scrollBy({left:-336,behavior:'smooth'})" aria-label="Foto anterior">‹</button>
       <div class="galeria" id="galeria-scroll">
@@ -89,11 +89,18 @@
 </section>
 
 <section class="origem">
-  <div class="wrap origem-single" data-reveal>
-    <div class="kicker">Origem</div>
-    <h2>Uma tradição do povoado de São Benedito, no Maranhão</h2>
-    <p>O Café Maná nasceu em São Benedito, povoado do município de Tutóia (MA). Por muitos anos, a bebida foi preparada nas casas das famílias da comunidade — sobretudo por quem não tomava café tradicional. Com o tempo, veio a ideia de levar essa tradição a mais gente, mantendo a essência: ingredientes simples, torra, moagem e cuidado no preparo, sem conservantes ou aditivos industriais.</p>
-    <blockquote>O coco babaçu usado na produção é comprado de quebradeiras de coco do Maranhão e do Piauí, valorizando o trabalho dessas comunidades.</blockquote>
+  <div class="wrap origem-grid">
+    <div>
+      <div class="kicker">Origem</div>
+      <h2>Uma tradição do povoado de São Benedito, no Maranhão</h2>
+      <p>O Café Maná nasceu em São Benedito, povoado do município de Tutóia (MA). Por muitos anos, a bebida foi preparada nas casas das famílias da comunidade — sobretudo por quem não tomava café tradicional. Com o tempo, veio a ideia de levar essa tradição a mais gente, mantendo a essência: ingredientes simples, torra, moagem e cuidado no preparo, sem conservantes ou aditivos industriais.</p>
+      <blockquote>O coco babaçu usado na produção é comprado de quebradeiras de coco do Maranhão e do Piauí, valorizando o trabalho dessas comunidades.</blockquote>
+    </div>
+    <div class="origem-fotos">
+      <img src="assets/torra-forno.webp" alt="Torra do café de arroz em fornalha de barro, ao ar livre, em São Benedito (MA)">
+      <img src="assets/torra-detalhe.webp" alt="Grãos de arroz e coco babaçu torrados, prontos para moagem">
+      <p class="origem-legenda">Torra artesanal em fornalha de barro — o mesmo processo de sempre, em pequenos lotes.</p>
+    </div>
   </div>
 </section>
 
@@ -158,7 +165,48 @@
       </div>
     </div>
 
-    <div class="listas">
+    <div class="lucro-block">
+      <svg class="lucro-chart" viewBox="0 0 620 320" role="img" aria-label="Gráfico de lucro estimado por mês, de acordo com a quantidade de pacotes vendidos">
+        <line class="grid-line" x1="70" y1="280" x2="600" y2="280"></line>
+        <line class="grid-line" x1="70" y1="215" x2="600" y2="215"></line>
+        <line class="grid-line" x1="70" y1="150" x2="600" y2="150"></line>
+        <line class="grid-line" x1="70" y1="85" x2="600" y2="85"></line>
+        <line class="grid-line" x1="70" y1="20" x2="600" y2="20"></line>
+        <text class="axis-label" x="60" y="284" text-anchor="end">R$0</text>
+        <text class="axis-label" x="60" y="219" text-anchor="end">R$300</text>
+        <text class="axis-label" x="60" y="154" text-anchor="end">R$600</text>
+        <text class="axis-label" x="60" y="89" text-anchor="end">R$900</text>
+        <text class="axis-label" x="60" y="24" text-anchor="end">R$1.200</text>
+
+        <rect class="bar" x="110" y="244.6" width="70" height="35.4"></rect>
+        <text class="bar-value" x="145" y="234.6" text-anchor="middle">R$163</text>
+        <text class="bar-label" x="145" y="300" text-anchor="middle">15 un/mês</text>
+
+        <rect class="bar" x="250" y="209.1" width="70" height="70.9"></rect>
+        <text class="bar-value" x="285" y="199.1" text-anchor="middle">R$327</text>
+        <text class="bar-label" x="285" y="300" text-anchor="middle">30 un/mês</text>
+
+        <rect class="bar" x="390" y="138.3" width="70" height="141.7"></rect>
+        <text class="bar-value" x="425" y="128.3" text-anchor="middle">R$654</text>
+        <text class="bar-label" x="425" y="300" text-anchor="middle">60 un/mês</text>
+
+        <rect class="bar destaque" x="530" y="43.8" width="70" height="236.2"></rect>
+        <text class="bar-value" x="565" y="33.8" text-anchor="middle">R$1.090</text>
+        <text class="bar-label" x="565" y="300" text-anchor="middle">100 un/mês</text>
+      </svg>
+
+      <div class="lucro-texto">
+        <h4>Quanto sobra pra você, por mês</h4>
+        <p>Com o preço de fábrica de R$19,00 e revenda a R$29,90, cada pacote deixa cerca de <strong>R$10,90 de lucro</strong> — sem contar se você vender a R$34,90, onde a margem sobe pra R$15,90 por unidade.</p>
+        <ul>
+          <li>15 pacotes/mês ≈ R$163 de lucro</li>
+          <li>30 pacotes/mês ≈ R$327 de lucro</li>
+          <li>60 pacotes/mês ≈ R$654 de lucro</li>
+          <li>100 pacotes/mês ≈ R$1.090 de lucro</li>
+        </ul>
+        <p class="lucro-obs">Estimativa com base no preço de revenda mais conservador (R$29,90). Não é garantia de venda — depende do seu giro de estoque e da praça.</p>
+      </div>
+    </div>
       <div>
         <h4>O que você recebe</h4>
         <ul>
@@ -189,6 +237,7 @@
   <div class="wrap">
     <div><strong>Café Maná®</strong>Café de arroz · São Benedito, Tutóia - MA</div>
     <div><strong>(98) 99984-1156</strong>WhatsApp para pedidos</div>
+    <div><strong><a href="https://www.instagram.com/cafe_mana_1" target="_blank" rel="noopener" style="color:inherit;">@cafe_mana_1</a></strong>Instagram</div>
     <div><strong>CNPJ 32.117.993/0001-72</strong>© <span id="ano"></span> Café Maná</div>
   </div>
 </footer>
